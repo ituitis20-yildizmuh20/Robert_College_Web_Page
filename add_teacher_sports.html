@@ -1,6 +1,9 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF8" />
+  <!--ADDING-->
+  <head lang="en">
+    <meta charset="UTF-8"/>
+    <title>CHOOSE YOUR STYLE</title>
     <style>
       #formDiv1 {
         display: none;
@@ -57,7 +60,7 @@
         <b>Teacher Name:</b>
         <input type="text" placeholder="Galatasaray" id="teamNameField" />
         <b>Cluster:</b>
-        <select id="clusterField">
+        <select id="clusterField2">
           <option value="HOME">HOME</option>
           <option value="AWAY">AWAY</option>
         </select>
@@ -95,7 +98,7 @@
         let cell2 = row.insertCell(1);
         cell2.innerHTML = document.getElementById("teamNameField").value;
         let cell3 = row.insertCell(2);
-        cell3.innerHTML = document.getElementById("clusterField").value;
+        cell3.innerHTML = document.getElementById("clusterField2").value;
 
         form1DivElement.style.display = "hidden";
         form2DivElement.style.display = "hidden";

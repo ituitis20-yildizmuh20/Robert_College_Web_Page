@@ -4,7 +4,7 @@
   <head lang="en">
     <meta charset="UTF-8" />
     <title>Robert College</title>
-    <link rel="stylesheet" type=“text/css” href="main_styles.css">
+    <link rel="stylesheet" href="main_styles.css">
     <link
       rel="icon"
       type="image/png"
@@ -27,15 +27,23 @@
       img {
         border-radius: 50px;
       }
-
+      .popup {
+        margin: 70px auto;
+        padding: 20px;
+        background: rgb(10, 70, 105);
+        border-radius: 5px;
+        width: 30%;
+        position: relative;
+        transition: all 5s ease-in-out;
+      }
       .overlay {
         position: fixed;
         top: 0;
         bottom: 0;
         left: 0;
         right: 0;
-        background: rgba(0, 0, 0, 0.7);
-        transition: opacity 500ms;
+        background: rgba(10, 0, 0, 0.7);
+        transition: opacity 550ms;
         visibility: hidden;
         opacity: 0;
       }
@@ -44,19 +52,11 @@
         opacity: 1;
       }
 
-      .popup {
-        margin: 70px auto;
-        padding: 20px;
-        background: #fff;
-        border-radius: 5px;
-        width: 30%;
-        position: relative;
-        transition: all 5s ease-in-out;
-      }
+      
 
       .popup h2 {
         margin-top: 0;
-        color: #333;
+        color: rgb(255, 252, 101);
         font-family: Tahoma, Arial, sans-serif;
       }
       .popup .close {
@@ -76,6 +76,44 @@
         max-height: 30%;
         overflow: auto;
       }
+      .topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+.topnav a.about {
+  background-color: #bdba1e;
+  color: white;
+}
+
+.h1 {
+
+  font: 1em sans-serif;
+  position: right;
+ 
+}
+
+.table, th, td {
+    border: 1px solid rgb(209, 154, 83);
+    border-collapse: collapse;
+}
     </style>
   </head>
   <body>
@@ -110,11 +148,11 @@
     <div class="topnav">
       <a class="about" href="#popup1"><b>About Writer</b></a>
       <a class="about_rc" href="#popup2"><b>About RC</b></a>
-      <a class="academics" href="academics.html"><b>Academics</b></a>
-      <a class="dean" href="dean.html">Dean's Message</a>
+      <a class="academics" href="#popup3"><b>Academics</b></a>
+      <a class="dean" href="#popup4">Dean's Message</a>
+      <a class="adding" href="add_teacher_sports.html">Choose Your Style</a>
       <a class="origin" href="https://website.robcol.k12.tr/en/home-page"
-        >Original Website of RC</a
-      >
+        >Original Website of RC</a>
     </div>
 
     <!--popup1 --->
@@ -133,8 +171,37 @@
         <h2>ABOUT ROBERT COLLEGE</h2>
         <a class="close" href="#">&times;</a>
         <div class="content">
-          Thank to pop me out of that button, but now i'm done so you can close
-          this window.
+          "Located in Istanbul, Turkey, Robert College is a co-educational high school founded in 1863.
+          <br> Admission is based on the standardized high school entrance exam prepared by the Turkish Ministry of National Education,<br> 
+          taken in Turkish during 8th grade. Students who come to Robert College score in the top 0.02% on this exam."
+        </div>
+      </div>
+    </div>
+    <!--popup2 --->
+    <div id="popup3" class="overlay">
+      <div class="popup">
+        <h2>ACADEMICS</h2>
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+          "The Robert College five-year high school academic program is unique in Turkey.<br> It was originally approved by the Turkish Ministry of National Education in 1998, <br>
+    and has been updated and re-approved several times. It aims to meet the <br>needs of students who plan to attend university, either abroad or in Turkey." <br>
+        </div>
+      </div>
+    </div>
+    <!--popup2 --->
+    <div id="popup4" class="overlay">
+      <div class="popup">
+        <h2>DEAN'S MESSAGE</h2>
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+          "...My vision of Robert College centers on connection. Not just to technology, which is sometimes<br>  overly prevalent in the modern world, 
+         but to ourselves, to other people, and to the natural world. These are the relationships wherein true <br> and true success in life can be found. 
+         These are the connections I see daily, between our students and their amazing teachers and support<br>  staff, with the natural world, and with themselves 
+         through the many reflective experiences our teaching provides. I think it is why I see <br> so much laughter at RC, despite the challenges of a demanding academic workload..."<br> 
+         <br> 
+         With warmest regards,<br> 
+         Adam Oliver<br> 
+         Head of School 
         </div>
       </div>
     </div>

@@ -1,0 +1,121 @@
+<html>
+  <head>
+    <meta charset="UTF8" />
+    <style>
+      #formDiv1 {
+        display: none;
+      }
+      #formDiv2 {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="table1">
+      <thead>
+        <tr>
+          <th>Teacher Name</th>
+          <th>Subject</th>
+          <th>Cluster</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <table id="table2">
+      <thead>
+        <tr>
+          <th>Sports Type</th>
+          <th>Team Name</th>
+          <th>Cluster</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <button onclick="showAddTeacherForm()">Add Teacher</button>
+    <button onclick="showAddSportForm()">Add Sport</button>
+    <div id="formDiv1">
+      <form>
+        <b>Subject:</b>
+        <input type="text" placeholder="Physics" id="subjectField" />
+        <b>Teacher Name:</b>
+        <input type="text" placeholder="Hale Can" id="teacherNameField" />
+        <b>Cluster:</b>
+        <select id="clusterField">
+          <option value="SAY">SAY</option>
+          <option value="SÖZ">SÖZ</option>
+          <option value="EA">EA</option>
+          <option value="DİL">DİL</option>
+        </select>
+        <button type="reset" onclick="addTeacher()">ADD</button>
+      </form>
+    </div>
+    <div id="formDiv2">
+      <form>
+        <b>Subject 2:</b>
+        <input type="text" placeholder="Football" id="sportField" />
+        <b>Teacher Name:</b>
+        <input type="text" placeholder="Galatasaray" id="teamNameField" />
+        <b>Cluster:</b>
+        <select id="clusterField">
+          <option value="HOME">HOME</option>
+          <option value="AWAY">AWAY</option>
+        </select>
+        <button type="reset" onclick="addSport()">ADD</button>
+      </form>
+    </div>
+    <script>
+      const form1DivElement = document.getElementById("formDiv1");
+      const form2DivElement = document.getElementById("formDiv2");
+      const table1Element = document.getElementById("table1");
+      const table2Element = document.getElementById("table2");
+      let teacherCount = 0;
+      let teamCount = 0;
+
+      function addTeacher() {
+        teacherCount++;
+        var row = table1Element.insertRow(teacherCount);
+        let cell1 = row.insertCell(0);
+        cell1.innerHTML = document.getElementById("subjectField").value;
+        let cell2 = row.insertCell(1);
+        cell2.innerHTML = document.getElementById("teacherNameField").value;
+        let cell3 = row.insertCell(2);
+        cell3.innerHTML = document.getElementById("clusterField").value;
+
+        form1DivElement.style.display = "hidden";
+        form2DivElement.style.display = "hidden";
+        table1Element.style.display = "block";
+        table2Element.style.display = "block";
+      }
+      function addSport() {
+        teamCount++;
+        var row = table2Element.insertRow(teamCount);
+        let cell1 = row.insertCell(0);
+        cell1.innerHTML = document.getElementById("sportField").value;
+        let cell2 = row.insertCell(1);
+        cell2.innerHTML = document.getElementById("teamNameField").value;
+        let cell3 = row.insertCell(2);
+        cell3.innerHTML = document.getElementById("clusterField").value;
+
+        form1DivElement.style.display = "hidden";
+        form2DivElement.style.display = "hidden";
+        table1Element.style.display = "block";
+        table2Element.style.display = "block";
+      }
+
+      function showAddTeacherForm() {
+        form1DivElement.style.display = "block";
+        form2DivElement.style.display = "none";
+        table1Element.style.display = "block";
+        table2Element.style.display = "none";
+      }
+
+      function showAddSportForm() {
+        form1DivElement.style.display = "none";
+        form2DivElement.style.display = "block";
+        table1Element.style.display = "none";
+        table2Element.style.display = "block";
+      }
+    </script>
+  </body>
+</html>

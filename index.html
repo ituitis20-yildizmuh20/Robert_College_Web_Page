@@ -1,76 +1,149 @@
 <!DOCTYPE html>
 <html>
   <!--HOME PAGE-->
-<head lang="en">
-  <meta charset="UTF-8">
-  <title>Robert College </title>
-  <link rel="stylesheet"  type=“text/css” href="main_styles.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="web_photos/favicon-32x32.png">
+  <head lang="en">
+    <meta charset="UTF-8" />
+    <title>Robert College</title>
+    <link rel="stylesheet" type=“text/css” href="main_styles.css">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="web_photos/favicon-32x32.png"
+    />
+
     <style>
-     body {
-          background-color: black;
-          background-image:url("web_photos/historic_logo.png");
-          background-position: right top;
-          background-repeat:no-repeat;background-attachment:fixed;
-          color: white;
+      body {
+        background-color: black;
+        background-image: url("web_photos/historic_logo.png");
+        background-position: right top;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        color: white;
       }
       html {
-  font-family: "Lucida Sans", sans-serif;
-       }
-       img {
-  border-radius: 50px;
-        }
+        font-family: "Lucida Sans", sans-serif;
+      }
+      img {
+        border-radius: 50px;
+      }
+
+      .overlay {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.7);
+        transition: opacity 500ms;
+        visibility: hidden;
+        opacity: 0;
+      }
+      .overlay:target {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      .popup {
+        margin: 70px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 5px;
+        width: 30%;
+        position: relative;
+        transition: all 5s ease-in-out;
+      }
+
+      .popup h2 {
+        margin-top: 0;
+        color: #333;
+        font-family: Tahoma, Arial, sans-serif;
+      }
+      .popup .close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        transition: all 200ms;
+        font-size: 30px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #333;
+      }
+      .popup .close:hover {
+        color: #06d85f;
+      }
+      .popup .content {
+        max-height: 30%;
+        overflow: auto;
+      }
     </style>
-</head>
-<body>
-   <!--Banner-->
-  <div style="width:100px; height:90px; padding:15px; background-color:rgb(0, 0, 0); color: white"><img src="web_photos/logo_banner.gif" alt="banner"></div> 
+  </head>
+  <body>
+    <!--Banner-->
+    <div
+      style="
+        width: 100px;
+        height: 90px;
+        padding: 15px;
+        background-color: rgb(0, 0, 0);
+        color: white;
+      "
+    >
+      <img src="web_photos/logo_banner.gif" alt="banner" />
+    </div>
 
- 
-  
+    <!--Header-->
+    <div class="header">
+      <h1>Robert College</h1>
+    </div>
+    <div id="school">
+      <img
+        src="web_photos/robert_main_photo.jpg"
+        alt="Main"
+        style="float: right; width: 50%"
+      />
+    </div>
+    <span style="background: #89c589; color: rgb(236, 209, 5)">
+      "The Wise Door for Wise Life"
+    </span>
+    <!--Other Pages-->
+    <div class="topnav">
+      <a class="about" href="#popup1"><b>About Writer</b></a>
+      <a class="about_rc" href="#popup2"><b>About RC</b></a>
+      <a class="academics" href="academics.html"><b>Academics</b></a>
+      <a class="dean" href="dean.html">Dean's Message</a>
+      <a class="origin" href="https://website.robcol.k12.tr/en/home-page"
+        >Original Website of RC</a
+      >
+    </div>
 
+    <!--popup1 --->
+    <div id="popup1" class="overlay">
+      <div class="popup">
+        <h2>ABOUT ME</h2>
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+          <p>....A man struggling with what life brings in unexpected times... </p>
+        </div>
+      </div>
+    </div>
+    <!--popup2 --->
+    <div id="popup2" class="overlay">
+      <div class="popup">
+        <h2>ABOUT ROBERT COLLEGE</h2>
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+          Thank to pop me out of that button, but now i'm done so you can close
+          this window.
+        </div>
+      </div>
+    </div>
 
-  <!--Header-->
-  <div class="header">
-      
-    <h1>Robert College </h1>
-  </div>
-  <div id="school">
-    <img src="web_photos/robert_main_photo.jpg" alt="Main" style="float:right; width:50%px" >
-      
-  </div>
-  <span style="background:#89c589; color: rgb(236, 209, 5)">
-    "The Wise Door for Wise Life"
-
-  </span>
-   <!--Other Pages-->
-  <div class="topnav" >
-    <a class="about" href="about_me.html"><b>About Writer</b></a>
-    <a class="about_rc" href="about_rc.html"><b>About RC</b></a>
-    <a class="academics" href="academics.html"><b>Academics</b></a>
-    <a class="dean" href="dean.html">Dean's Message</a>
-    <a class="origin" href="https://website.robcol.k12.tr/en/home-page">Original Website of RC</a>
-  </div>
-
-
-  <form>
-    <select name = "dropdown">
-       <option value = "Maths" selected>Maths</option>
-       <option value = "Physics">Physics</option>
-       <option value = "Sports">Sports</option>
-       <option value = "Chemistry">Chemistry</option>
-       <option value = "Arts">Arts</option>
-    </select>
-    <br><br>
-  <input type="submit">
- </form>
-
-
- <!--Tables Rows Columns-->
-  <h2>2020 YKS Results</h2>
-    <table class="table" style="width:30%" >
+    <!--Tables Rows Columns-->
+    <h2>2020 YKS Results</h2>
+    <table class="table" style="width: 30%">
       <tr>
-        <th>University </th>
+        <th>University</th>
         <th>University Type</th>
         <th>City</th>
         <th>Total</th>
@@ -89,28 +162,50 @@
       </tr>
     </table>
 
-
     <!--All lists-->
-  <ul>
-    <li>Vision&Mission</li>
-    <li>Robert College strives to serve Turkey as a model of educational<br> excellence with <u> the highest academic standards</u> and quality of teaching.</li>
-  </ul>
-  <h1>Guiding Principals </h1>
-  <ol>
-    <li>Robert College has a rich heritage</li>
-    <li>Students are the focus
-    <ol style="list-style-type: lower-alpha; padding-bottom: 0;">
-     <li style="margin-left:2em">"Being student-focused implies a spirit of partnership in teaching,<br> learning, and living at Robert College among the faculty, staff, <br>and students."</li>
+    <ul>
+      <li>Vision&Mission</li>
+      <li>
+        Robert College strives to serve Turkey as a model of educational<br />
+        excellence with <u> the highest academic standards</u> and quality of
+        teaching.
+      </li>
+    </ul>
+    <h1>Guiding Principals</h1>
+    <ol>
+      <li>Robert College has a rich heritage</li>
+      <li>
+        Students are the focus
+        <ol style="list-style-type: lower-alpha; padding-bottom: 0">
+          <li style="margin-left: 2em">
+            "Being student-focused implies a spirit of partnership in
+            teaching,<br />
+            learning, and living at Robert College among the faculty, staff,
+            <br />and students."
+          </li>
+        </ol>
+      </li>
+      <li>Robert College students are prepared</li>
+      <li>
+        Robert College prepares students to be leaders in their community and
+        nation.
+      </li>
     </ol>
-    </li>
-    <li>Robert College students are prepared</li>
-    <li> Robert College prepares students to be leaders in their community and nation.</li>
-  </ol>
-  <div style="position: relative;background-color: rgb(0, 0, 0); width: 900px; height: 800px;">    
-
-    <div style="position: absolute; bottom: 5px; background-color: rgb(0, 0, 0)">
-    --IMPORTANT : ALL INFORMATION ARE TAKEN FROM ORIGINAL WEBSITE FROM THE ROBERT COLLEGE--
+    <div
+      style="
+        position: relative;
+        background-color: rgb(0, 0, 0);
+        width: 900px;
+        height: 800px;
+      "
+    >
+      <div
+        style="position: absolute; bottom: 5px; background-color: rgb(0, 0, 0)"
+      >
+        --IMPORTANT : ALL INFORMATION ARE TAKEN FROM ORIGINAL WEBSITE FROM THE
+        ROBERT COLLEGE--
+      </div>
     </div>
-</div>
-</body>
+    <script></script>
+  </body>
 </html>
